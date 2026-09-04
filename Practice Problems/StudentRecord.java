@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-class Inventory {
-    static void parseInventoryRecord(String csvLine) {
+class StudentRecord {
+    static void parseStudentRecord(String csvLine) {
         String[] data = csvLine.split(",");
 
         if (data.length != 3) {
@@ -9,7 +9,7 @@ class Inventory {
             return;
         }
 
-        System.out.println("Product: " + data[0] + " | SKU: " + data[1] + " | Qty: " + data[2]);
+        System.out.println("Name: " + data[0] + " | Roll No: " + data[1] + " | Dept: " + data[2]);
     }
 
     public static void main(String[] args) {
@@ -17,6 +17,6 @@ class Inventory {
 
         String csvLine = sc.nextLine();
 
-        parseInventoryRecord(csvLine);
+        parseStudentRecord(csvLine);
     }
 }
